@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
     res.render('workshop/index', { title: 'Lab Perangkat Keras - Introduction to WLAN' });
 });
 
-router.get('/admin', (req, res) => {
+router.get('/workshop/sesi1/admin', (req, res) => {
 	var user = auth(req);
 
     if (user === undefined || user['name'] !== masterUser || user['pass'] !== masterPass) {
@@ -18,13 +18,13 @@ router.get('/admin', (req, res) => {
         res.setHeader('Authentication', 'Buktikan bahwa kalian salah satu dari Noobers!');
         res.end('Unauthorized');
     } else {
-        res.render('workshop/admin', { title: 'Lab Perangkat Keras - Introduction to WLAN' });
+        res.render('workshop/admin', { title: 'Lab Perangkat Keras - Introduction to WLAN - Sesi 1' });
     }
 });
 
 /* GET home page. */
-router.get('/praktikan', (req, res) => {
-	res.render('workshop/index', { title: 'Lab Perangkat Keras - Introduction to WLAN' });
+router.get('/workshop/sesi1/praktikan', (req, res) => {
+	res.render('workshop/index', { title: 'Lab Perangkat Keras - Introduction to WLAN - Sesi 1' });
 });
 
 

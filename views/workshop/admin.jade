@@ -3,60 +3,108 @@ extends ../layout/layout_admin
 block content
 	.reveal
 		.slides
-			section
+			section(data-background-color="#EF9A9A")
 				h1 Workshop
 				h2 Introduction to WLAN
 				h3 Laboratorium Perangkat Keras
 
-			section
+			section(data-background-color="#F48FB1")
 				h1 Apa itu Jaringan?
 
-			section
+			section(data-background-color="#CE93D8")
 				h1 Jaringan
-				h5.fragment Hubungan antara komputer-komputer atau perangkat jaringan lainnya yg memiliki tujuan yg sama yaitu berbagi sumber daya, berkomunikasi, dan dapat mengakses informasi.
+				p.fragment Hubungan antara komputer-komputer atau perangkat jaringan lainnya yg memiliki tujuan yg sama yaitu berbagi sumber daya, berkomunikasi, dan dapat mengakses informasi.
 
-			section
+			section(data-background-color="#B39DDB")
 				h3 Jaringan Berdasarkan Jarak Geografis
 				br
 				h5.fragment Jaringan LAN (Local Area Network)
 				h5.fragment Jaringan MAN (Metropolitan Area Network)
 				h5.fragment Jaringan WAN (Wide Area Network)
 			
-			section
+			section(data-background-color="#9FA8DA")
 				h3 Jaringan Berdasarkan Hubungan Tiap Komputer
 				br
 				h5.fragment Jaringan Client-Server
 				h5.fragment Jaringan Peer-to-Peer
 			
-			section
+			section(data-background-color="#90CAF9")
 				h3 Jaringan Berdasarkan Media Transmisi Data
 				br
 				h5.fragment Wired Network
 				h5.fragment Wireless Network
 			
-			section
+			section(data-background-color="#81D4FA")
 				h3 Peralatan Networking
 				section
 					h5 NIC
-					img(style="width: 512px" src="img/wlan/NIC.jpg")
+					img(style="width: 512px" src="../../img/wlan/NIC.jpg")
 				section
 					h5 Kabel
-					img(style="width: 512px" src="img/wlan/Kabel.jpg")
+					img(style="width: 512px" src="../../img/wlan/Kabel.jpg")
 				section
 					h5 Access Point
-					img(style="width: 512px" src="img/wlan/Access Point.jpg")
+					img(style="width: 512px" src="../../img/wlan/Access Point.jpg")
 				section 
 					h5 Router (Wired/Wireless)
-					img(style="width: 384px" src="img/wlan/Router.jpg")
+					img(style="width: 384px" src="../../img/wlan/Router.jpg")
 				section
 					h5 Switch
-					img(style="width: 512px" src="img/wlan/Switch.jpg")
+					img(style="width: 512px" src="../../img/wlan/Switch.jpg")
 				section
 					h5 Hub
-					img(style="width: 384px" src="img/wlan/Hub.jpg")
+					img(style="width: 384px" src="../../img/wlan/Hub.jpg")
 				section
 					h5 Bridge
-					img(style="width: 512px" src="img/wlan/Bridge.jpg")
+					img(style="width: 512px" src="../../img/wlan/Bridge.jpg")
 				section
 					h5 Repeater
-					img(style="width: 384px" src="img/wlan/Repeater.jpg")
+					img(style="width: 384px" src="../../img/wlan/Repeater.jpg")
+				
+			section(data-background-color="#80DEEA")
+				h3 Topologi Jaringan
+				section
+					h5 Topologi Bus
+					img(style="width: 512px" src="../../img/wlan/Bus.jpg")
+				section
+					h5 Topologi Ring
+					img(style="width: 420px" src="../../img/wlan/Ring.jpg")
+				section
+					h5 Topologi Star
+					img(style="width: 420px" src="../../img/wlan/Star.jpg")
+				section
+					h5 Topologi Tree
+					img(style="width: 512px" src="../../img/wlan/Tree.jpg")
+				section
+					h5 Topologi Mesh
+					img(style="width: 420px" src="../../img/wlan/Mesh.jpg")
+
+			section(data-background-color="#80CBC4")
+				h3 OSI Layer 
+				p OSI Layer adalah Open System Interconnection, yang merupakan sebuah standard yang di ciptakan oleh ISO (International Organization for Standardization)
+
+			section(data-background-color="#A5D6A7")
+				h3 Mengapa dibutuhkan OSI Layer?
+				ol
+					li.fragment Menyediakan standar proses komunikasi di jaringan kedalam bentuk yang lebih kecil dan sederhana
+					li.fragment Penggantian Model OSI pada sebuah lapisan (layer) tidak akan mempengaruhi lapisan lain.
+					li.fragment Mendorong standarisasi industri untuk menyamakan standar komunikasi agar perangkat yang berbeda merek dapat berkomunikasi satu sama lain.
+
+			section(data-background-color="#C5E1A5")
+				h3 OSI Layer
+				.col-md-6.no-padding.no-margin
+					img(style="width: 420px" src="../../img/wlan/OSI.jpg")
+				.col-md-6.no-padding.no-margin
+					img(style="width: 420px" src="../../img/wlan/OSI 2.png")
+
+			section(data-background-color="#E6EE9C")
+				h3 Mode Transmisi
+				img(style="width: 512px" src="../../img/wlan/Transmission.jpg")
+
+			section(data-background-color="#FFF59D")
+				h3 Cara Kerja OSI
+				img(style="width: 512px" src="../../img/wlan/OSI 3.gif")
+
+			section(data-background-color="#FFE082")
+				h1 Terima Kasih
+				h2 Sampai bertemu di Sesi 2
