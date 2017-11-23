@@ -5,7 +5,6 @@ html(lang='en')
 		meta(name='viewport', content='width=device-width')
 		title=title
 		block css
-			link(rel='stylesheet', href='/css/style.css')
 			link(rel="stylesheet" href="/components/bootstrap/dist/css/bootstrap.min.css")
 			link(rel="stylesheet" href="/components/reveal.js/css/reveal.css")
 			link(rel="stylesheet" href="/components/reveal.js/css/theme/black.css")
@@ -19,6 +18,7 @@ html(lang='en')
 		script(src="/components/reveal.js/js/reveal.js")
 		script(src="/socket.io/socket.io.js")
 		script(src="/components/reveal.js/plugin/highlight/highlight.js")
+		script(src="/js/config.js")
 		script.
 			(function(){
 				Reveal.initialize({
@@ -28,7 +28,6 @@ html(lang='en')
 					mouseWheel: false
 				});
 
-				var socket = io.connect("http://localhost:3000");
 				socket.on('slidechanged', function (data) {
 					Reveal.slide(data.indexh, data.indexv, data.indexf);
 				});

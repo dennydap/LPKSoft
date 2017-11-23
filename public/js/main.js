@@ -1,6 +1,4 @@
 (function(){
-  var host = 'http://localhost:3000',
-      socket = io.connect(host);
   Reveal.initialize({
     history: true
   });

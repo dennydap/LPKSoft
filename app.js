@@ -6,6 +6,7 @@ const
     logger = require('morgan'),
     cookieParser = require('cookie-parser'),
     bodyParser = require('body-parser'),
+    session = require('express-session');
     routes = require('./routes/index'),
     app = express();
 
@@ -21,8 +22,12 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(session({ secret: 'lpk', cookie: { maxAge: 1080000 }}))
+app.use(checkAuth);
 
 app.use('/', routes);
+app.use('/login', routes);
+app.use('/logout', routes);
 app.use('/workshop/sesi1/admin', routes);
 app.use('/workshop/sesi1/praktikan', routes)
 
@@ -57,5 +62,15 @@ app.use((err, req, res, next) => {
         title: 'error'
     });
 });
+
+function checkAuth (req, res, next) {
+    if (req.url === '/workshop/sesi1/admin' && (!req.session || !req.session.authenticated)) {
+        res.redirect('/login');
+        return;
+    } else {
+        next();
+    }
+    
+}
 
 module.exports = app;

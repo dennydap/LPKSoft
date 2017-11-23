@@ -1,8 +1,57 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+/* Style untuk halaman depan */
+
+h1 {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 4em;
+	font-weight: bold;
+	color: #eee;
 }
 
-a {
-  color: #00B7FF;
+h3 {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 3em;
+	font-weight: normal;
+	color: #eee;
+}
+
+.center {
+	text-align: center;
+}
+
+.animate-delay-1s {
+	animation-delay: 1s;
+}
+
+.animate-delay-2s {
+	animation-delay: 2s;
+}
+
+.animate-delay-3s {
+	animation-delay: 3s;
+}
+
+.vertical-align {
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.full-page {
+	background: #000;
+	background-image: url('../img/Index.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.overlay {
+	background: rgba(0,0,0,0.5);
+	width: 100%;
+	height: 100vh;
+}
+
+.btn-text {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 28px;
 }

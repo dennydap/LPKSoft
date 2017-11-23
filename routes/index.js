@@ -1,31 +1,41 @@
 const 
 	express = require('express'),
-	router = express.Router(),
-	auth = require('basic-auth'),
-	masterUser = 'username',
-    masterPass = 'password';
+	router = express.Router();
 
-/* GET home page. */
+/* Home Page */
 router.get('/', (req, res) => {
-    res.render('workshop/index', { title: 'Lab Perangkat Keras - Introduction to WLAN' });
+    res.render('index', { title: 'Lab Perangkat Keras' });
 });
 
-router.get('/workshop/sesi1/admin', (req, res) => {
-	var user = auth(req);
+/* Login & Logout */
+router.get('/login',  function (req, res) {
+    res.render('login', { title: 'Lab Perangkat Keras - Login' });
+});
 
-    if (user === undefined || user['name'] !== masterUser || user['pass'] !== masterPass) {
-        res.statusCode = 401;
-        res.setHeader('Authentication', 'Buktikan bahwa kalian salah satu dari Noobers!');
-        res.end('Unauthorized');
+router.post('/login', function (req, res) {
+    if (req.body.username && req.body.username === 'lpk' && req.body.password && req.body.password === 'n00bers') {
+        req.session.authenticated = true;
+        res.redirect('workshop/sesi1/admin');
     } else {
-        res.render('workshop/admin', { title: 'Lab Perangkat Keras - Introduction to WLAN - Sesi 1' });
+        res.redirect('/login');
     }
 });
 
-/* GET home page. */
+router.get('/logout', function (req, res) {
+    delete req.session.authenticated;
+    res.redirect('/');
+});    
+
+/* Workshop WLAN */
+/*   Admin Page  */
+router.get('/workshop/sesi1/admin', (req, res) => {
+    res.render('workshop/admin', { title: 'Lab Perangkat Keras - Introduction to WLAN - Sesi 1' });  
+});
+
+/* Workshop WLAN */
+/*   User Page   */
 router.get('/workshop/sesi1/praktikan', (req, res) => {
 	res.render('workshop/index', { title: 'Lab Perangkat Keras - Introduction to WLAN - Sesi 1' });
 });
-
 
 module.exports = router;
