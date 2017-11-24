@@ -19,7 +19,7 @@ html(lang='en')
 					.col-md-4.col-md-offset-4.jumbotron.vertical-align
 						h2.center(style="font-weight: bold") Login
 						hr
-						form(method="post" action="login")
+						form(method="post")
 							.form-group(style="padding-top: 16px")
 								.col-md-12
 									label(for="username") Username
@@ -30,8 +30,8 @@ html(lang='en')
 									input.form-control.col-md-8(type="password" name="password" placeholder="Masukkan password") 
 							.form-group(style="padding-top: 32px")
 								.col-md-12(style="padding-top: 32px")
-									button.btn.btn-primary.col-md-8.col-md-offset-2(type="submit" value="submit") Submit
-
+									button.btn.btn-primary.col-md-5(type="submit" formaction="/login/sesi1") Sesi 1
+									button.btn.btn-danger.col-md-5.col-md-offset-2(type="submit" formaction="/login/sesi2") Sesi 2
 
 		script(src="/components/jquery/dist/jquery.min.js")
 		script(src="/components/bootstrap/dist/js/bootstrap.min.js")

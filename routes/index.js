@@ -12,10 +12,19 @@ router.get('/login',  function (req, res) {
     res.render('login', { title: 'Lab Perangkat Keras - Login' });
 });
 
-router.post('/login', function (req, res) {
+router.post('/login/sesi1', function (req, res) {
     if (req.body.username && req.body.username === 'lpk' && req.body.password && req.body.password === 'n00bers') {
         req.session.authenticated = true;
         res.redirect('workshop/sesi1/admin');
+    } else {
+        res.redirect('/login');
+    }
+});
+
+router.post('/login/sesi2', function (req, res) {
+    if (req.body.username && req.body.username === 'lpk' && req.body.password && req.body.password === 'n00bers') {
+        req.session.authenticated = true;
+        res.redirect('workshop/sesi2/admin');
     } else {
         res.redirect('/login');
     }
@@ -29,13 +38,21 @@ router.get('/logout', function (req, res) {
 /* Workshop WLAN */
 /*   Admin Page  */
 router.get('/workshop/sesi1/admin', (req, res) => {
-    res.render('workshop/admin', { title: 'Lab Perangkat Keras - Introduction to WLAN - Sesi 1' });  
+    res.render('workshop/sesi1/admin', { title: 'Lab Perangkat Keras - Introduction to WLAN - Sesi 1' });  
+});
+
+router.get('/workshop/sesi2/admin', (req, res) => {
+    res.render('workshop/sesi2/admin', { title: 'Lab Perangkat Keras - Introduction to WLAN - Sesi 2' });  
 });
 
 /* Workshop WLAN */
 /*   User Page   */
 router.get('/workshop/sesi1/praktikan', (req, res) => {
-	res.render('workshop/index', { title: 'Lab Perangkat Keras - Introduction to WLAN - Sesi 1' });
+	res.render('workshop/sesi1/index', { title: 'Lab Perangkat Keras - Introduction to WLAN - Sesi 1' });
+});
+
+router.get('/workshop/sesi2/praktikan', (req, res) => {
+    res.render('workshop/sesi2/index', { title: 'Lab Perangkat Keras - Introduction to WLAN - Sesi 2' });
 });
 
 module.exports = router;

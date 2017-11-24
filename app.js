@@ -22,7 +22,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(session({ secret: 'lpk', cookie: { maxAge: 1080000 }}))
+app.use(session({ secret: 'lpk', cookie: { maxAge: 60000 }}))
 app.use(checkAuth);
 
 app.use('/', routes);
@@ -64,7 +64,7 @@ app.use((err, req, res, next) => {
 });
 
 function checkAuth (req, res, next) {
-    if (req.url === '/workshop/sesi1/admin' && (!req.session || !req.session.authenticated)) {
+    if ((req.url === '/workshop/sesi1/admin' || req.url === '/workshop/sesi2/admin') && (!req.session || !req.session.authenticated)) {
         res.redirect('/login');
         return;
     } else {

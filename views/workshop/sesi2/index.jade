@@ -1,0 +1,163 @@
+extends ../../layout/layout
+
+block content
+	.reveal
+		.slides
+			section(data-background-color="#222222")
+				h1 Workshop
+				h2 Introduction to WLAN - Sesi 2
+				h3 Laboratorium Perangkat Keras
+
+			section(data-background-color="#F48FB1")
+				h1 Antena
+				p.fragment Alat untuk mengirim dan menerima gelombang elektromagnetik, bergantung kepada pemakaian dan penggunaan frekuensinya, antena bisa berwujud berbagai bentuk, mulai dari seutas kabel, dipole, ataupun yagi, dsb
+
+			section(data-background-color="#CE93D8")
+				h3 Jenis Antena Berdasarkan Jaringannya
+				ul
+					li.fragment Directional
+					li.fragment Omni Directional
+
+			section(data-background-color="#B39DDB")
+				h3 Omni-Directional
+				p.fragment Antena omni-directional memiliki arah radiasi gelombang mikro 360 derajat
+				p.fragment Memiliki penguatan antena (gain) yang kecil berkisar antara 2 – 8 dB. 
+				p.fragment Cocok dipasang pada ruang kantor, cafe, aula, perpustakaan dan ruang tertutup lainnya.
+			
+			section(data-background-color="#9FA8DA")
+				h3 Arah Sinyal Omni-Directional
+				img(style="width: 512px" src="../../../img/wlan/Omni Directional.jpg")
+			
+			section(data-background-color="#90CAF9")
+				h3 Contoh Antena Omni-Directional
+				section
+					h5 Omni
+					img(style="width: 420px" src="../../../img/wlan/Antenna Omni 1.jpg")
+				section
+					h5 Coaxial
+					img(style="width: 420px" src="../../../img/wlan/Antenna Omni 2.jpg")
+				section
+					h5 Pigtail
+					img(style="width: 420px" src="../../../img/wlan/Antenna Omni 3.jpg")
+			
+			section(data-background-color="#81D4FA")
+				h3 Directional Panel
+				p.fragment Memiliki arah radiasi gelombang mikro ke depan dan memiliki sudut kesamping 45 derajat
+				p.fragment Penguatan gain antena panel relatif lebih tinggi daripada omni-directional
+				p.fragment Dipasang diluar ruangan (outdoor) dengan area luas tetapi dengan jarak yang tidak begitu jauh sekitar 500 meter. 
+				p.fragment Dipasang untuk pengguna yang berada di taman, halaman sekolah maupun pelanggan RT/RW Net				
+				
+			section(data-background-color="#80DEEA")
+				h3 Arah Sinyal Directional
+				img(style="width: 512px" src="../../../img/wlan/Directional.jpg")
+
+			section(data-background-color="#80CBC4")
+				h3 Contoh Antena Directional
+				section
+					h5 Yagi
+					img(style="width: 420px" src="../../../img/wlan/Antenna Directional 1.jpg")
+				section
+					h5 Antenna Grid
+					img(style="width: 420px" src="../../../img/wlan/Antenna Directional 2.jpg")
+				section
+					h5 Parabolic
+					img(style="width: 420px" src="../../../img/wlan/Antenna Directional 3.jpg")
+				section
+					h5 Sectoral
+					img(style="width: 420px" src="../../../img/wlan/Antenna Directional 4.jpg")
+
+			section(data-background-color="#A5D6A7")
+				h3 Standar pada Wireless
+				section
+					h3 802.11a
+					p Standar wireless network dengan maksimum data transfer rate 54 Mbps dan bekerja pada frekuensi 5 GHz.
+				section
+					h3 802.11b
+					p Standar wireless network dengan maksimum data transfer rate 11 Mbps dan bekerja pada frekuensi 2,4 GHz.
+				section
+					h3 802.11g
+					p Standar wireless network dengan maksimum data transfer rate 54 Mbps dan bekerja pada frekuensi 2,4 GHz. Dengan backward compatibility berperangkat 802.11b
+				section
+					h3 802.11n
+					p Standar wireless network dengan maksimum data transfer rate 600 Mbps dan bekerja pada frekuensi 2,4 GHz atau 5 GHz.
+				section
+					h3 802.11ac
+					p Standar wireless network dengan maksimum data transfer rate  1.3 Gbps - 3Gbps dan bekerja pada frekuensi 5 GHz
+				section
+					h3 802.11ad
+					p Standar wireless network dengan maksimum data transfer rate 800 Mbps - 4,6Gbps dan bekerja pada frekuensi 57 GHz and 66 GHz
+					p Teknologi ini masih dikembangkan, sehingga masih bersifat experimental
+
+			section(data-background-color="#C5E1A5")
+				section
+					h3 SSID Hide (Service Set Identifier Hide)
+					p Hanya orang tertentu yang mengetahui nama SSID itu saja yang bisa mengakses jaringan wireless tersebut
+				section
+					h3 WEP (Wired Equivalent Privacy)
+					p Sebuah metode pengamanan jaringan nirkabel, disebut juga dengan Shared Key Authentication. 
+					p Shared Key Authentication adalah metode otentikasi yang membutuhkan penggunaan WEP
+				section
+					h3 WPA / WPA2 : PSK (Pre-Shared Key) 
+					p Mode security yang menggantikan WEP(Wired Equivalent Privacy)
+					p Pengamanan jaringan nirkabel dengan menggunakan metoda WPA-PSK jika tidak ada authentikasi server yang digunakan
+				section
+					h3 RADIUS (Remote Access Dial In User Service)
+					p Sebuah protokol keamanan komputer yang digunakan untuk melakukan autentikasi, otorisasi, dan pendaftaran akun pengguna secara terpusat untuk mengakses jaringan
+				section
+					h3 MAC Filtering
+					p Metode untuk mencegah pengguna asing (tidak diinginkan) yang berniat untuk mengakses masuk ke jaringan router nirkabel, dengan cara memblokir MAC address / memperbolehkan MAC address
+				section
+					h3 Captive Portal
+					p Suatu teknik autentikasi dan pengamanan data yang lewat dari network internal ke network eksternal.
+					p Merupakan mesin router atau gateway yang memproteksi atau tidak mengizinkan adanya trafik, hingga user melakukan registrasi
+
+			section(data-background-color="#E6EE9C")
+				h3 IP Address
+				p IP Address adalah sebuah alamat pada komputer agar komputer bisa saling terhubung dengan komputer lain
+				p Terdiri dari 4 Blok, setiap Blok di isi oleh angka 0 - 255
+
+			section(data-background-color="#FFF59D")
+				h3 Jenis-jenis IP Address
+				.col-md-12
+					.col-md-4
+						p IP v4
+					.col-md-8
+						p Panjang totalnya adalah 32-bit
+						p Contoh: 192.168.0.3
+				.col-md-12
+					.col-md-4
+						p IP v6
+					.col-md-8
+						p Panjang totalnya adalah 128-bit
+						p Contoh: 2001:db8::ff00:42:8329
+
+			section(data-background-color="#FFE082")
+				h3 Kelas-kelas IP Address
+				img(style="width: 720px" src="../../../img/wlan/Kelas IP.png")
+
+			section(data-background-color="#FFE082")
+				h1 Subnetting
+				p Sebuah teknik yang mengizinkan para administrator jaringan untuk memanfaatkan 32 bit IP address yang tersedia dengan lebih efisien
+
+			section(data-background-color="#FFE082")
+				h3 Fungsi Subnetting
+				ul
+					li.fragment Mengalokasikan IP address yang terbatas supaya lebih efisien
+					li.fragment Mengoperasikan semua device tersebut di dalam network ID yang sama akan memperlambat network
+
+			section(data-background-color="#FFE082")
+				h3 Subnet Mask
+				p Agar subnet dapat bekerja, router harus diberi tahu bagian mana dari host ID yang digunakan untuk network ID subnet
+				p Contoh: 255.255.255.0, 255.255.255.192
+
+			section(data-background-color="#FFE082")
+				h1 Contoh Soal
+				ul
+					li 192.168.1.100/24
+					li 10.10.10.69/26
+					li 192.168.69.69/28
+
+			section(data-background-color="#FFE082")
+				h2 Saatnya Praktek 
+				h2 Cisco Packet Tracer
+				p Buka aplikasi Cisco Packet Tracer di komputer kalian
