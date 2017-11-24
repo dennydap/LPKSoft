@@ -1,6 +1,6 @@
 {
-  "name": "lpk",
-  "version": "0.0.1",
+  "name": "lpksoft",
+  "version": "1.0",
   "private": true,
   "main": "app.js",
   "scripts": {
