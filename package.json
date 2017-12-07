@@ -1,7 +1,7 @@
 {
   "name": "lpksoft",
   "version": "1.0.0",
-  "private": true,
+  "private": false,
   "main": "app.js",
   "scripts": {
     "start": "nodemon ./bin/www",
