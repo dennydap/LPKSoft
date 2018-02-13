@@ -63,14 +63,4 @@ app.use((err, req, res, next) => {
     });
 });
 
-function checkAuth (req, res, next) {
-    if ((req.url === '/workshop/sesi1/admin' || req.url === '/workshop/sesi2/admin') && (!req.session || !req.session.authenticated)) {
-        res.redirect('/login');
-        return;
-    } else {
-        next();
-    }
-    
-}
-
 module.exports = app;
