@@ -38,12 +38,10 @@ router.get('/logout', function (req, res) {
 /* Workshop WLAN */
 /*   Admin Page  */
 router.get('/workshop/sesi1/admin/', checkAuth, (req, res) => {
-    window.location.hash = '';
     res.render('workshop/sesi1/admin', { title: 'Lab Perangkat Keras - Introduction to WLAN - Sesi 1' });  
 });
 
 router.get('/workshop/sesi2/admin/', checkAuth, (req, res) => {
-    window.location.hash = '';
     res.render('workshop/sesi2/admin', { title: 'Lab Perangkat Keras - Introduction to WLAN - Sesi 2' });  
 });
 
@@ -57,14 +55,13 @@ router.get('/workshop/sesi2/praktikan/', (req, res) => {
     res.render('workshop/sesi2/index', { title: 'Lab Perangkat Keras - Introduction to WLAN - Sesi 2' });
 });
 
-var checkAuth = function(req, res, next) {
-    if (!req.isAuthenticated()) {
+function checkAuth (req, res, next) {
+    if (!req.session.authenticated) {
          res.redirect('/login');
          return;
      } else {
          next();
      }
-     
- }
+}
 
 module.exports = router;

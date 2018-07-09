@@ -22,8 +22,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(session({ secret: 'lpk', cookie: { maxAge: 60000 }}))
-app.use(checkAuth);
+app.use(session({ secret: 'lpk', resave: true, saveUninitialized: true, cookie: { maxAge: 60000 }}))
 
 app.use('/', routes);
 app.use('/login', routes);
